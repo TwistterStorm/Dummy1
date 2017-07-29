@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sith2.dummy1.FirstActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="Welcome"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/uemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Enter Your Email"
+        android:layout_above="@+id/upass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp" />
+
+    <EditText
+        android:id="@+id/upass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/btnr"
+        android:layout_alignStart="@+id/uemail" />
+
+    <Button
+        android:id="@+id/btnr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_above="@+id/btnin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp" />
+
+    <Button
+        android:id="@+id/btnin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnr"
+        android:layout_marginBottom="33dp" />
+
+    <EditText
+        android:id="@+id/dname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Display Name"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_above="@+id/uemail"
+        android:layout_alignStart="@+id/uemail"
+        android:layout_marginBottom="38dp" />
+</RelativeLayout>
