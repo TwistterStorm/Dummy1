@@ -7,8 +7,11 @@
     tools:context="com.example.sith2.dummy1.SecondActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:list_item="@layout/list_user"
+        android:layout_above="@+id/logout">
 
     </android.support.v7.widget.RecyclerView>
 
