@@ -8,7 +8,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -33,5 +37,37 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(d);
             }
         });
+        loadusers();
+    }
+
+    private FirebaseRecyclerAdapter<Model , ListAdapter> madapter;
+
+    private void loadusers(){
+        DatabaseReference users = FirebaseDatabase.getInstance().getReference();
+        Query userQuery = users.child("users");
+
+        madapter = new FirebaseRecyclerAdapter<Model, ListAdapter>(Model.class,R.layout.list_users, ListAdapter.class, userQuery) {
+            @Override
+            protected void populateViewHolder(ListAdapter viewHolder, final Model model, int position) {
+                viewHolder.userlist.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent z = new Intent(SecondActivity.this,ThirdActivity.class);
+                      // z.putExtra(ThirdActivity.EXTRA, model);
+                        startActivity(z);
+
+                    }
+                });
+
+                viewHolder.bind(model, new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+
+                    }
+                });
+            }
+        };
+        mrecycle.setAdapter(madapter);
     }
 }

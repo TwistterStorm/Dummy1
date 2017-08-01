@@ -68,8 +68,8 @@ public class FirstActivity extends AppCompatActivity {
                     String uid = mAuth.getCurrentUser().getUid();
                     mRef = FirebaseDatabase.getInstance().getReference().child("users").child(uid);
 
-                    mRef.child("Dname").setValue(DName);
-                    mRef.child("Email").setValue(Email);
+                    mRef.child("dname").setValue(DName);
+                    mRef.child("email").setValue(Email);
 
                     Intent b = new Intent(FirstActivity.this, SecondActivity.class);
                     startActivity(b);
