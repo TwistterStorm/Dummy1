@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:list_item="@layout/list_user"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="30dp">
+
 
     </android.support.v7.widget.RecyclerView>
 
@@ -24,5 +25,14 @@
         app:srcCompat="@drawable/logout"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Login Users List"
+        android:textSize="25dp"/>
 
 </RelativeLayout>

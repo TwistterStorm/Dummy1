@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class ListAdapter extends RecyclerView.ViewHolder {
 
     TextView userlist;
-    private Model model;
+    private ModelUser modelUser;
 
 
     public ListAdapter(View itemView) {
@@ -20,7 +20,7 @@ public class ListAdapter extends RecyclerView.ViewHolder {
         userlist = (TextView) itemView.findViewById(R.id.list);
     }
 
-    public void bind(Model model, View.OnClickListener clickListener){
-        userlist.setText(model.getDname());
+    public void bind(ModelUser modelUser, View.OnClickListener clickListener){
+        userlist.setText(modelUser.getDname());
     }
 }

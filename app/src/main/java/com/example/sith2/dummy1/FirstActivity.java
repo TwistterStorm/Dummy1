@@ -70,6 +70,7 @@ public class FirstActivity extends AppCompatActivity {
 
                     mRef.child("dname").setValue(DName);
                     mRef.child("email").setValue(Email);
+                    mRef.child("uid").setValue(uid);
 
                     Intent b = new Intent(FirstActivity.this, SecondActivity.class);
                     startActivity(b);
